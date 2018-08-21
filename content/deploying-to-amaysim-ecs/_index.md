@@ -4,7 +4,6 @@ date: 2018-08-14T13:14:32+10:00
 outputs: ["Reveal"]
 #reveal_hugo:
 #  transition: "convex"
-#draft: true
 ---
 
 <style>
@@ -104,6 +103,14 @@ Rancher issues:
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
 ![amaysim ECS Overview](/media/amaysim ECS Overview.svg)
+
+{{% /slide %}}
+
+---
+
+{{% slide background-image="/media/JSbQ6paw.png" %}}
+
+![amaysim ECS Overview](/media/amaysim ECS Overview V2.svg)
 
 {{% /slide %}}
 
@@ -368,9 +375,34 @@ BASE_PATH=/551f7c62858899445e42d904170f56ca
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
-# demo
+# verifying and troubleshooting
+
+{{% /slide %}}
+
+---
+
+{{% slide background-image="/media/JSbQ6paw.png" %}}
+
+  1. Check the CloudFormation events
+  1. Check the service events and state
+  1. Check the task exit reason
+  1. Check the cluster state
+  1. Check the app logs
+  1. Check response directly from load balancer or even container
+  1. Check the target group healthchecks
+  1. Check CloudWatch metrics or [Grafana]
+  1. If all else fails: [SSH to EC2 instance]
+
+[SSH to EC2 instance]: https://confluence.amaysim.net/display/ENG/How+to+add+your+SSH+Public+key+to+IAM
+[Grafana]: https://grafana.amaysim.net/d/c5Otmommk/ecs-service?orgId=1&var-Account=CloudWatch&var-ClusterName=ECS-Production-ECSCluster-134SG64ARQMII&var-ServiceName=ECS-Production-App-Mobile-API-a5bd236-64-ECSServiceLB-KHACNCIKMB3Y&var-TargetGroup=targetgroup%2FECS-P-ALBTa-1LA5U97P5BA4H%2F7c7aa0d996f50b15&var-LoadBalancer=app%2FECS-Pro-ALB-VVAD1U9VEM7A%2F328724079d7a7fe8&var-DatabaseConnections=ec-bf-preprod&from=1534101385468&to=1534134043657
 
 {{% note %}}
+cookiecutter
+.env
+path: /551f7c62858899445e42d904170f56ca
+export BUILD_VERSION
+dockerBuild
+dockerPush - fails because wrong account ID
 Deploy `example` from laptop to Dev
 Note that it is run the same way in GoCD or any CD tool.
 Deploy it with a broken image
@@ -381,6 +413,9 @@ Show ALB rules
 Access version through wildcard CloudFront
 Run cutover
 Demonstrate working app
+
+  * [service event example](https://ap-southeast-2.console.aws.amazon.com/ecs/home?region=ap-southeast-2#/clusters/ECS-Core-Dev-ECSCluster-Y8E1VESDMNBX/services/ECS-Core-Dev-App-Mobile-BSS-API-288-d4248f3-ECSServiceLB-9PHXNB28BKW8/events)
+  * [ecs migration progress](https://confluence.amaysim.net/display/ENG/ECS+Migration+Plan)
 {{% /note %}}
 
 {{% /slide %}}
@@ -388,30 +423,6 @@ Demonstrate working app
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
-
-## verifying and troubleshooting
-
-  1. Check the CloudFormation events
-  1. Check the service events and state
-  1. Check the task exit reason
-  1. Check the cluster state
-  1. Check the app logs
-  1. Check the target group healthchecks
-  1. Check CloudWatch metrics or [Grafana]
-  1. If all else fails: [SSH to EC2 instance]
-
-[SSH to EC2 instance]: https://confluence.amaysim.net/display/ENG/How+to+add+your+SSH+Public+key+to+IAM
-[Grafana]: https://grafana.amaysim.net/d/c5Otmommk/ecs-service?orgId=1&var-Account=CloudWatch&var-ClusterName=ECS-Production-ECSCluster-134SG64ARQMII&var-ServiceName=ECS-Production-App-Mobile-API-a5bd236-64-ECSServiceLB-KHACNCIKMB3Y&var-TargetGroup=targetgroup%2FECS-P-ALBTa-1LA5U97P5BA4H%2F7c7aa0d996f50b15&var-LoadBalancer=app%2FECS-Pro-ALB-VVAD1U9VEM7A%2F328724079d7a7fe8&var-DatabaseConnections=ec-bf-preprod&from=1534101385468&to=1534134043657
-
-{{% note %}}
-  * [service event example](https://ap-southeast-2.console.aws.amazon.com/ecs/home?region=ap-southeast-2#/clusters/ECS-Core-Dev-ECSCluster-Y8E1VESDMNBX/services/ECS-Core-Dev-App-Mobile-BSS-API-288-d4248f3-ECSServiceLB-9PHXNB28BKW8/events)
-{{% /note %}}
-
-{{% /slide %}}
-
----
-
-{{% slide background-image="/media/JSbQ6paw.png" %}}
 
 # Thanks!
 Questions?
