@@ -1,5 +1,5 @@
 ---
-title: "Navigation"
+title: "Aaron's slides"
 date: 2018-08-14T13:14:32+10:00
 outputs: ["Reveal"]
 reveal_hugo:
@@ -7,8 +7,9 @@ reveal_hugo:
   margin: 0.2
 ---
 
-# Navigation
+# Aaron's Slides
 
   * [Deploying To ECS](/deploying-to-amaysim-ecs.html)
   * [Docker 101](/docker-101.html)
   * [Jenkins Agents Autoscaling](/jenkins-agents-autoscaling.html)
+  * [Kubernetes Scaling 2: Overprovisioning](/overprovisioning.html)

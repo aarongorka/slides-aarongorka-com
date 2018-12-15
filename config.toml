@@ -1,6 +1,6 @@
 baseURL = "https://slides.aarongorka.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Aaron's slides"
 disableKinds = ["sitemap", "RSS"]
 theme = "reveal-hugo"
 uglyurls = true
