@@ -1,6 +1,7 @@
 ---
 title: "Kubernetes Scaling 2: Overprovisioning"
 outputs: ["Reveal"]
+featuredImage: "/overprovisioning_preview.png"
 reveal_hugo:
   custom_theme: "reveal-hugo/themes/robot-lung.css"
   margin: 0.2
