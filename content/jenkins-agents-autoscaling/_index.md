@@ -65,6 +65,8 @@ EOF
 
 https://github.com/aarongorka/docker-jenkins-autoscaler
 
+![aarongorka/docker-jenkins-autoscaler](/jenkins_autoscaler.png)
+
 ---
 
 **A utility container that helps autoscaling your Jenkins nodes in AWS.**
