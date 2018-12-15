@@ -39,8 +39,6 @@ featuredImage: "/media/deploying-to-amaysim-ecs-preview.png"
 
 # deploying to amaysim ECS
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
@@ -48,8 +46,6 @@ featuredImage: "/media/deploying-to-amaysim-ecs-preview.png"
   * Introduction to amaysim's ECS platform
   * Setting up a project with ecs-utils
   * Common troubleshooting steps
-
-{{% /slide %}}
 
 ---
 
@@ -75,8 +71,6 @@ Rancher issues:
   * no container autoscaling
 {{% /note %}}
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
@@ -89,15 +83,11 @@ Rancher issues:
   * Spot Fleet
   * Flexible but opinionated architecture
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
 # architecture overview
-
-{{% /slide %}}
 
 ---
 
@@ -105,15 +95,11 @@ Rancher issues:
 
 ![amaysim ECS Overview](/media/amaysim ECS Overview.svg)
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
 ![amaysim ECS Overview](/media/amaysim ECS Overview V2.svg)
-
-{{% /slide %}}
 
 ---
 
@@ -127,8 +113,6 @@ Rancher issues:
 Explain two types of scaling, instance and container
 {{% /note %}}
 
-{{% /slide%}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
@@ -140,23 +124,17 @@ Explain two types of scaling, instance and container
 
 [Target Tracking]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
 
 # prerequisite: the application stack
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
 
 ![Application Stack](/media/Application Stack.svg)
-
-{{% /slide %}}
 
 ---
 
@@ -165,8 +143,6 @@ Explain two types of scaling, instance and container
 [docker-ecs-utils/ecs-cluster-application.yml](https://github.com/aarongorka/docker-ecs-utils/blob/master/ecs-cluster-application.yml)
 
 ![application template in Github](/media/application_template_github2.png)
-
-{{% /slide %}}
 
 ---
 
@@ -193,23 +169,17 @@ Continuous Deployment using Stacker:
       VpcId: vpc-abc234ad
 ```
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
 # setting up a project with ecs-utils
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
 [![ecs-utils repo](/media/Screen Shot 2018-08-16 at 10.41.50-fullpage.png)](https://github.com/amaysim-au/docker-ecs-utils)
-
-{{% /slide %}}
 
 ---
 
@@ -222,8 +192,6 @@ Continuous Deployment using Stacker:
 
 [ecs.json]: https://github.com/amaysim-au/docker-ecs-utils/blob/master/example/deployment/ecs.json
 [ecs-config.yml]: https://github.com/amaysim-au/docker-ecs-utils/blob/master/example/deployment/ecs-config.yml
-
-{{% /slide %}}
 
 ---
 
@@ -276,8 +244,6 @@ Continuous Deployment using Stacker:
 
 {{% /note %}}
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
@@ -295,8 +261,6 @@ autoscaling_target: 60  # what level of CPU utilisation to maintain
 autoscaling_min_size: 3
 autoscaling_max_size: 20
 ```
-
-{{% /slide %}}
 
 ---
 
@@ -327,23 +291,17 @@ AWS_HOSTED_ZONE=www-dev.amaysim.com.au
 BASE_PATH=/551f7c62858899445e42d904170f56ca
 ```
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
 
 # deployment walkthrough
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
 
 ![Version Stack](/media/Version Stack.svg)
-
-{{% /slide %}}
 
 ---
 
@@ -354,8 +312,6 @@ BASE_PATH=/551f7c62858899445e42d904170f56ca
 
 [Target Tracking]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html
 [Placement strategies]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategies-placementstrategy.html
-
-{{% /slide %}}
 
 ---
 
@@ -368,15 +324,11 @@ BASE_PATH=/551f7c62858899445e42d904170f56ca
   * Setting desired number of containers
   * blue/green
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/JSbQ6paw.png" %}}
 
 # verifying and troubleshooting
-
-{{% /slide %}}
 
 ---
 
@@ -411,13 +363,9 @@ Run cutover
 Demonstrate working app
 {{% /note %}}
 
-{{% /slide %}}
-
 ---
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
 
 # Thanks!
 Questions?
-
-{{% /slide %}}
