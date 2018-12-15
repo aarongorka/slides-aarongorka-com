@@ -4,6 +4,7 @@ title = "My New Hugo Site"
 disableKinds = ["sitemap", "RSS"]
 theme = "reveal-hugo"
 uglyurls = true
+enableEmoji = true
 
 [params]
 description = "Aaron's slides"

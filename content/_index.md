@@ -11,3 +11,4 @@ reveal_hugo:
 
   * [Deploying To ECS](/deploying-to-amaysim-ecs.html)
   * [Docker 101](/docker-101.html)
+  * [Jenkins Agents Autoscaling](/jenkins-agents-autoscaling.html)
