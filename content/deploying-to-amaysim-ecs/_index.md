@@ -161,9 +161,9 @@ Explain two types of scaling, instance and container
 
 {{% slide background-image="/media/W7I1OB1A.png" class="orange" %}}
 
-[AWSOrgs/common/ecs/ecs-cluster-application.yml](https://github.com/amaysim-au/cloud-formation/blob/master/AWSOrgs/common/ecs/ecs-cluster-application.yml)
+[docker-ecs-utils/ecs-cluster-application.yml](https://github.com/aarongorka/docker-ecs-utils/blob/master/ecs-cluster-application.yml)
 
-![application template in Github](/media/application_template_github.png)
+![application template in Github](/media/application_template_github2.png)
 
 {{% /slide %}}
 
@@ -174,25 +174,23 @@ Explain two types of scaling, instance and container
 Continuous Deployment using Stacker:
 
 ```yaml
-  - name: ECS-Dev-App-Mobile-API
-    template_path: AWSOrgs/common/ecs/ecs-cluster-application.yml
+  - name: ECS-Dev-App-Example
+    template_path: ecs-cluster-application.yml
     region: ap-southeast-2
-    profile: ama-nonprod
+    profile: nonprod
     requires:
       - ECS-Dev
     variables:
-      Name: Mobile-API
+      Name: Example
       Environment: Dev
       ClusterName: Dev
       HostedZoneName: dev-apps.amaysim.net.
       LBType: ALB
       Scheme: External
-      SSLCertificateARN: arn:aws:acm:ap-southeast-2:999999999999:certificate/4013c1bc-a532-4fcc-9f90-742d90031060  # *.dev-apps.amaysim.net
-      Subnets: subnet-08fbbe51,subnet-24414d52,subnet-ba4758de  # Dev Public x
-      VpcId: vpc-40eda724  # amaysim Nonprod
+      SSLCertificateARN: arn:aws:acm:ap-southeast-2:999999999999:certificate/4013c1bc-a532-4fcc-9f90-123456789876  # *.dev-apps.amaysim.net
+      Subnets: subnet-12345678,subnet-22345678,subnet-3456789e  # Dev Public x
+      VpcId: vpc-abc234ad
 ```
-
-[stacker-Dev.yml](https://github.com/amaysim-au/cloud-formation/blob/master/stacker-Dev.yml#L107)
 
 {{% /slide %}}
 
@@ -390,11 +388,8 @@ BASE_PATH=/551f7c62858899445e42d904170f56ca
   1. Check the app logs
   1. Check response directly from load balancer or even container
   1. Check the target group healthchecks
-  1. Check CloudWatch metrics or [Grafana]
-  1. If all else fails: [SSH to EC2 instance]
-
-[SSH to EC2 instance]: https://confluence.amaysim.net/display/ENG/How+to+add+your+SSH+Public+key+to+IAM
-[Grafana]: https://grafana.amaysim.net/d/c5Otmommk/ecs-service?orgId=1&var-Account=CloudWatch&var-ClusterName=ECS-Production-ECSCluster-134SG64ARQMII&var-ServiceName=ECS-Production-App-Mobile-API-a5bd236-64-ECSServiceLB-KHACNCIKMB3Y&var-TargetGroup=targetgroup%2FECS-P-ALBTa-1LA5U97P5BA4H%2F7c7aa0d996f50b15&var-LoadBalancer=app%2FECS-Pro-ALB-VVAD1U9VEM7A%2F328724079d7a7fe8&var-DatabaseConnections=ec-bf-preprod&from=1534101385468&to=1534134043657
+  1. Check CloudWatch metrics
+  1. If all else fails: SSH to EC2 instance
 
 {{% note %}}
 cookiecutter
@@ -413,9 +408,6 @@ Show ALB rules
 Access version through wildcard CloudFront
 Run cutover
 Demonstrate working app
-
-  * [service event example](https://ap-southeast-2.console.aws.amazon.com/ecs/home?region=ap-southeast-2#/clusters/ECS-Core-Dev-ECSCluster-Y8E1VESDMNBX/services/ECS-Core-Dev-App-Mobile-BSS-API-288-d4248f3-ECSServiceLB-9PHXNB28BKW8/events)
-  * [ecs migration progress](https://confluence.amaysim.net/display/ENG/ECS+Migration+Plan)
 {{% /note %}}
 
 {{% /slide %}}
