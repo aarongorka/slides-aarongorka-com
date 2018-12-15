@@ -2,7 +2,8 @@
 title: "deploying to amaysim ECS"
 date: 2018-08-14T13:14:32+10:00
 outputs: ["Reveal"]
-featuredImage: "/media/amaysim ECS Overview V2.svg"
+#featuredImage: "/media/amaysim ECS Overview V2.svg"
+featuredImage: "/media/application_template_github2.png"
 #reveal_hugo:
 #  transition: "convex"
 ---
