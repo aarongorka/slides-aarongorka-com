@@ -76,6 +76,14 @@ Benefits of CI/CD
 
 ---
 
+## Immutable Artifacts
+
+---
+
+## 12-Factor Configuratio
+
+---
+
 ## Testing
 
   * {{< frag c="Unit tests" >}}
@@ -112,6 +120,10 @@ Benefits of CI/CD
 ---
 
 ## Environments
+
+{{% note %}}
+Static integrated environments
+{{% /note %}}
 
 ---
 
