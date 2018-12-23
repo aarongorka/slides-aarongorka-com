@@ -1,10 +1,12 @@
 baseURL = "https://slides.aarongorka.com/"
 languageCode = "en-us"
 title = "Aaron's slides"
+author = "Aaron Gorka"
 disableKinds = ["sitemap", "RSS"]
 theme = "reveal-hugo"
 uglyurls = true
 enableEmoji = true
+enableRobotsTXT = true
 
 [params]
 description = "Aaron's slides"

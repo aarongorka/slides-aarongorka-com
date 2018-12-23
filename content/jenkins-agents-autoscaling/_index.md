@@ -1,6 +1,7 @@
 ---
 title: "Jenkins Agents Autoscaling"
 outputs: ["Reveal"]
+featureImage: "/jenkins_agents_autoscaling_preview.png"
 reveal_hugo:
   custom_theme: "reveal-hugo/themes/robot-lung.css"
   margin: 0.2
