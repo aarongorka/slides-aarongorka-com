@@ -3,7 +3,7 @@ namespace_delimiter: ""
 stacks:
   - name: slides-aarongorka-com
     template_path: cloudformation.yml
-    region: ap-southeast-2
+    region: us-east-1
     variables:
       DomainName: slides.aarongorka.com
       HostedZone: aarongorka.com
