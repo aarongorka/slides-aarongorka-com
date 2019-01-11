@@ -2,6 +2,7 @@
 title: "Kubernetes Scaling"
 outputs: ["Reveal"]
 featuredImage: "/kubernetes_scaling_preview.png"
+aliases: [/kubernetes-scaling.html]
 reveal_hugo:
   custom_theme: "reveal-hugo/themes/robot-lung.css"
   margin: 0.2

@@ -3,6 +3,7 @@ title: "deploying to amaysim ECS"
 date: 2018-08-14T13:14:32+10:00
 outputs: ["Reveal"]
 featuredImage: "/media/deploying-to-amaysim-ecs-preview.png"
+aliases: [/deploying-to-amaysim-ecs.html]
 #reveal_hugo:
 #  transition: "convex"
 ---

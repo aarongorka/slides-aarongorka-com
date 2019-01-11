@@ -2,6 +2,7 @@
 title: "Docker 101"
 outputs: ["Reveal"]
 featuredImage: "/docker_101_preview.png"
+aliases: [/docker-101.html]
 reveal_hugo:
   custom_theme: "reveal-hugo/themes/robot-lung.css"
   margin: 0.2

@@ -9,8 +9,8 @@ reveal_hugo:
 
 # Aaron's Slides
 
-  * [Deploying To ECS](/deploying-to-amaysim-ecs.html)
-  * [Docker 101](/docker-101.html)
-  * [Jenkins Agents Autoscaling](/jenkins-agents-autoscaling.html)
-  * [Kubernetes Scaling](/kubernetes-scaling.html)
-  * [Kubernetes Scaling 2: Overprovisioning](/overprovisioning.html)
+  * [Deploying To ECS](/deploying-to-amaysim-ecs/)
+  * [Docker 101](/docker-101/)
+  * [Jenkins Agents Autoscaling](/jenkins-agents-autoscaling/)
+  * [Kubernetes Scaling](/kubernetes-scaling/)
+  * [Kubernetes Scaling 2: Overprovisioning](/overprovisioning/)

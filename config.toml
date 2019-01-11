@@ -4,7 +4,6 @@ title = "Aaron's slides"
 author = "Aaron Gorka"
 disableKinds = ["sitemap", "RSS"]
 theme = "reveal-hugo"
-uglyurls = true
 enableEmoji = true
 enableRobotsTXT = true
 
