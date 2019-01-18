@@ -57,6 +57,8 @@ Benefits of CI/CD
 
 ---
 
+{{% slide background-image="/artifact.jpg" %}}
+
 ## Immutable Artifacts
 
 ---
@@ -96,11 +98,15 @@ https://12factor.net/
 
 ## Branching Strategies
 
-  1. Trunk-based with Continuous Deployment
+  1. Trunk-based, commit to trunk
   2. Trunk-based with short-lived feature branches
   3. Trunk-based with versioned release branches
 
 https://trunkbaseddevelopment.com/
+
+{{% note %}}
+Short-lived feature branches
+{{% /note %}}
 
 ---
 
@@ -129,6 +135,10 @@ Static integrated environments
 ---
 
 ## Database Versioning
+
+  * https://github.com/flyway/flyway
+  * https://github.com/mongobee/mongobee
+  * https://github.com/fernandonogueira/ox
 
 ---
 
