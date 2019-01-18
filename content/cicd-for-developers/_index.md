@@ -153,6 +153,6 @@ Static integrated environments
 
 ---
 
-[Are you doing CI or CI Theatre ?](http://www.multunus.com/blog/2017/05/ci-theatre/)
-[Continuous Integration, not Continuous Isolation](https://damianbrady.com.au/2017/07/12/continuous-integration-not-continuous-isolation/)
-[It’s not CI, it’s just CI theatre](https://www.gocd.org/2017/05/16/its-not-CI-its-CI-theatre.html)
+  * [Are you doing CI or CI Theatre ?](http://www.multunus.com/blog/2017/05/ci-theatre/)
+  * [Continuous Integration, not Continuous Isolation](https://damianbrady.com.au/2017/07/12/continuous-integration-not-continuous-isolation/)
+  * [It’s not CI, it’s just CI theatre](https://www.gocd.org/2017/05/16/its-not-CI-its-CI-theatre.html)
