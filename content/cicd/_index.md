@@ -62,7 +62,7 @@ Benefits of CI/CD
 
 {{% note %}}
   1. Amazon: every 11.7 seconds
-  2. amaysim: several times a week, potentially many times a day
+  2. amaysim: many times a week
   3. Enterprise: every 6 weeks
 {{% /note %}}
 
@@ -80,7 +80,7 @@ Benefits of CI/CD
 
 ---
 
-## 12-Factor Configuratio
+## 12-Factor Configuration
 
 ---
 
