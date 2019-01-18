@@ -63,6 +63,8 @@ Benefits of CI/CD
 
 ## 12-Factor Configuration
 
+https://12factor.net/
+
 ---
 
 ## Testing
@@ -97,6 +99,8 @@ Benefits of CI/CD
   1. Trunk-based with Continuous Deployment
   2. Trunk-based with short-lived feature branches
   3. Trunk-based with versioned release branches
+
+https://trunkbaseddevelopment.com/
 
 ---
 
@@ -140,7 +144,6 @@ Static integrated environments
 
 ## Antipatterns
 
-  * {{< frag c="Black box CI servers" >}}
   * {{< frag c="Snowflake CI servers" >}}
   * {{< frag c="Neglecting local development" >}}
   * {{< frag c="Flaky pipelines" >}}
