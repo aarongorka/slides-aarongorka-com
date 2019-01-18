@@ -1,7 +1,6 @@
 ---
-title: "CI/CD"
+title: "CI/CD for Developers"
 date: 2018-12-21T22:21:41+11:00
-draft: true
 outputs: ["Reveal"]
 reveal_hugo:
   custom_theme: "reveal-hugo/themes/robot-lung.css"
@@ -36,17 +35,9 @@ Creating a build artifact via a CI server
 
 ---
 
-## Developer Experience
+## Positive Feedback Loop
 
-{{% note %}}
-  * Reducing friction to deploy to production
-{{% /note %}}
-
----
-
-## Feedback Loop
-
-Confidence & velocity
+{{% figure src="/feedback.png" attrlink="https://ovh.github.io/tat/overview/lifecycle/" %}}
 
 {{% note %}}
 Benefits of CI/CD
@@ -54,24 +45,14 @@ Benefits of CI/CD
 
 ---
 
-## Deployment Benchmarks
-
-  * {{< frag c="Production deployments per day" >}}
-  * {{< frag c="Speed" >}}
-  * {{< frag c="Collect metrics" >}}
-
-{{% note %}}
-  1. Amazon: every 11.7 seconds
-  2. amaysim: many times a week
-  3. Enterprise: every 6 weeks
-{{% /note %}}
-
----
+{{% slide background-image="/pipelines.jpg" %}}
 
 ## Pipelines
 
 {{% note %}}
+  * Left to right
   * Automatic deploys for 1 environment is not a pipeline
+  * Typical durations
 {{% /note %}}
 
 ---
@@ -127,7 +108,9 @@ Static integrated environments
 
 ---
 
-### Slice model/review apps
+### Review Apps
+
+{{% figure src="/continuous-delivery-review-apps.svg" attrlink="https://about.gitlab.com/product/review-apps/" %}}
 
 ---
 
@@ -150,6 +133,7 @@ Static integrated environments
 {{% note %}}
   * Launch Darkly
   * GitLab
+  * DIY
 {{% note %}}
 
 ---
@@ -159,14 +143,13 @@ Static integrated environments
   * {{< frag c="Black box CI servers" >}}
   * {{< frag c="Snowflake CI servers" >}}
   * {{< frag c="Neglecting local development" >}}
-  * {{< frag c="Flaky pipelines" >}}{{< frag c=" (especially flaky tests)" >}}
-  * {{< frag c="NiH" >}}{{< frag c=" vs Square peg in a round hole" >}}
-  * {{< frag c="Developer abstraction" >}}{{< frag c="--- pipeline & infrastructure ownership" >}}
+  * {{< frag c="Flaky pipelines" >}}
+  * {{< frag c="NiH" >}}
+  * {{< frag c="Developer abstraction" >}}
   * {{< frag c="Rolling backwards" >}}
-  * {{< frag c="Stale builds" >}}
 
 ---
 
-# Thanks!
-
-Questions?
+[Are you doing CI or CI Theatre ?](http://www.multunus.com/blog/2017/05/ci-theatre/)
+[Continuous Integration, not Continuous Isolation](https://damianbrady.com.au/2017/07/12/continuous-integration-not-continuous-isolation/)
+[It’s not CI, it’s just CI theatre](https://www.gocd.org/2017/05/16/its-not-CI-its-CI-theatre.html)
