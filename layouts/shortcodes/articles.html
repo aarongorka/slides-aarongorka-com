@@ -1,0 +1,9 @@
+<ul>
+{{ range $ind,$art := $.Site.Pages.ByDate }}
+    {{ if not $art.IsHome }}
+        {{ if (and (ne $art.Type "categories") (ne $art.Type "tags")) }}
+            <li><a href="{{ $art.Permalink }}">{{ $art.Params.title }}</a></li>
+        {{ end }}
+    {{ end }}
+{{ end }}
+</ul>
