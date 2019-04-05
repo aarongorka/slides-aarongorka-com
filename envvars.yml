@@ -11,18 +11,18 @@ envvars:
   - name: AWS_DEFAULT_REGION
     tags:
       - aws
-	- name: DOMAIN_NAME
-		tags:
-			- aws
-	- name: AWS_CLOUDFORMATION_STACK_NAME
-		tags:
-			- aws
-	- name: AWS_CLOUDFORMATION_STACK_NAME
-		tags:
-			- aws
-	- name: CERTIFICATE_ARN
-		tags:
-			- aws
-	- name: OAI_ID
-		tags:
-			- aws
+  - name: DOMAIN_NAME
+    tags:
+      - aws
+  - name: AWS_CLOUDFORMATION_STACK_NAME
+    tags:
+      - aws
+  - name: AWS_CLOUDFORMATION_STACK_NAME
+    tags:
+      - aws
+  - name: CERTIFICATE_ARN
+    tags:
+      - aws
+  - name: OAI_ID
+    tags:
+      - aws
