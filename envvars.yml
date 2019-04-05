@@ -1,28 +1,36 @@
 envvars:
   - name: AWS_ACCESS_KEY_ID
+    desc: AWS access key
     tags:
       - aws
   - name: AWS_SECRET_ACCESS_KEY
+    desc: AWS secret key
     tags:
       - aws
   - name: AWS_SESSION_TOKEN
+    desc: Assume role variable
     tags:
       - aws
   - name: AWS_DEFAULT_REGION
+    desc: AWS region
     tags:
       - aws
   - name: DOMAIN_NAME
+    desc: Domain name
     tags:
       - aws
   - name: AWS_CLOUDFORMATION_STACK_NAME
-    tags:
-      - aws
-  - name: AWS_CLOUDFORMATION_STACK_NAME
+    desc: CloudFormation stack to be created
     tags:
       - aws
   - name: CERTIFICATE_ARN
+    desc: Certificate to be used on CloudFront
     tags:
       - aws
   - name: OAI_ID
+    desc: Origin Access Identity ID
     tags:
       - aws
+tags:
+  - name: aws
+    desc: AWS-related envvars
