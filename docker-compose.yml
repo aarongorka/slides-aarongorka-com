@@ -35,6 +35,7 @@ services:
     image: amaysim/cfn-python-lint:latest
     network_mode: "none"
     entrypoint: ''
+    volumes:
       - .:/srv/app:Z
 
   write-good:
