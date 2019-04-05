@@ -1,4 +1,4 @@
-image: flemay/musketeers:latest  # Docker client, zeus, docker-compose, etc.
+image: aarongorka/musketeers:latest  # Docker client, zeus, docker-compose, etc.
 services:
   - docker:dind  # sidecar that actually runs the Docker daemon
 
