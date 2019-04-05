@@ -9,6 +9,7 @@ envvars:
       - aws
   - name: AWS_SESSION_TOKEN
     desc: Assume role variable
+    optional: true
     tags:
       - aws
   - name: AWS_DEFAULT_REGION
@@ -18,19 +19,26 @@ envvars:
   - name: DOMAIN_NAME
     desc: Domain name
     tags:
-      - aws
+      - cfn
+      - sync
   - name: AWS_CLOUDFORMATION_STACK_NAME
     desc: CloudFormation stack to be created
     tags:
-      - aws
+      - invalidate
   - name: CERTIFICATE_ARN
     desc: Certificate to be used on CloudFront
     tags:
-      - aws
+      - cfn
   - name: OAI_ID
     desc: Origin Access Identity ID
     tags:
-      - aws
+      - cfn
 tags:
   - name: aws
-    desc: AWS-related envvars
+    desc: AWS authentication
+  - name: cfn
+    desc: CloudFormation parameters
+  - name: invalidate
+    desc: Invalidation stage
+  - name: sync
+    desc: S3 sync stage

@@ -16,28 +16,28 @@ commands:
 
   syncToS3:
     exec: |
-      docker-compose run --rm envvars ensure --tags aws
+      docker-compose run --rm envvars ensure --tags aws,sync
       docker-compose run --rm aws aws s3 sync --no-progress --delete --cache-control 'max-age=3155695200' public/ s3://${DOMAIN_NAME}/
     dependencies:
       - dotenv
 
   cacheInvalidation:
     exec: |
-      docker-compose run --rm envvars ensure --tags aws
+      docker-compose run --rm envvars ensure --tags aws,invalidate
       docker-compose run --rm aws bash -c 'aws cloudfront create-invalidation --distribution-id=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${AWS_CLOUDFORMATION_STACK_NAME} --query "Stacks[0].Outputs[?OutputKey==\`CloudFrontDistributionId\`].OutputValue" --output=text) --paths "/*"'
     dependencies:
       - dotenv
 
   deploy:
     exec: |
-      docker-compose run --rm envvars ensure --tags aws
+      docker-compose run --rm envvars ensure --tags aws,cfn
       docker-compose run --rm stacker build stacker.yml --tail --recreate-failed
     dependencies:
       - dotenv
 
   diff:
     exec: |
-      docker-compose run --rm envvars ensure --tags aws
+      docker-compose run --rm envvars ensure --tags aws,cfn
       docker-compose run --rm stacker diff stacker.yml
     dependencies:
       - dotenv
