@@ -16,6 +16,7 @@ services:
     volumes:
       - .:/srv/app:Z
     working_dir: /srv/app
+
   stacker:
     image: amaysim/stacker:latest
     env_file: .env
@@ -23,6 +24,7 @@ services:
     volumes:
       - .:/stacks:Z
       - ~/.aws:/root/.aws:Z
+
   cfn-python-lint:
     image: amaysim/cfn-python-lint:latest
     network_mode: "none"
@@ -31,12 +33,7 @@ services:
     working_dir: /srv/app
     volumes:
       - .:/srv/app:Z
-  node:
-    image: node:latest
-    working_dir: /opt/app
-    volumes:
-      - .:/opt/app:Z
-      - ~/.yarn-cache:/usr/local/share/.cache/yarn/v1:Z
+
   write-good:
     image: aarongorka/write-good:latest
     network_mode: "none"
