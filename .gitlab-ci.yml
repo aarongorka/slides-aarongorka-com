@@ -1,4 +1,4 @@
-image: flemay/musketeers:latest  # Docker client, make, docker-compose, etc.
+image: flemay/musketeers:latest  # Docker client, zeus, docker-compose, etc.
 services:
   - docker:dind  # sidecar that actually runs the Docker daemon
 
@@ -14,7 +14,7 @@ stages:
 build:
   stage: build
   script:
-    - make build
+    - zeus build
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
   artifacts:
@@ -27,7 +27,7 @@ deploy:
   environment: 
     name: production
   script:
-    - make deploy
+    - zeus deploy
   only:
     - master
 
@@ -36,7 +36,7 @@ sync:
   environment: 
     name: production
   script:
-    - make syncToS3
+    - zeus syncToS3
   only:
     - master
 
@@ -45,6 +45,6 @@ invalidate:
   environment: 
     name: production
   script:
-    - make cacheInvalidation
+    - zeus cacheInvalidation
   only:
     - master
