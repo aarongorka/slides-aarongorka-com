@@ -25,14 +25,12 @@ services:
       - .:/stacks:Z
       - ~/.aws:/root/.aws:Z
 
-  cfn-python-lint:
-    image: amaysim/cfn-python-lint:latest
-    network_mode: "none"
-    entrypoint: ''
+  envvars:
+    image: flemay/envvars:0.0.4
     env_file: .env
-    working_dir: /srv/app
+    working_dir: /work
     volumes:
-      - .:/srv/app:Z
+      - .:/work
 
   write-good:
     image: aarongorka/write-good:latest

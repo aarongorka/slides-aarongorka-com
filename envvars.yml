@@ -1,0 +1,28 @@
+envvars:
+  - name: AWS_ACCESS_KEY_ID
+    tags:
+      - aws
+  - name: AWS_SECRET_ACCESS_KEY
+    tags:
+      - aws
+  - name: AWS_SESSION_TOKEN
+    tags:
+      - aws
+  - name: AWS_DEFAULT_REGION
+    tags:
+      - aws
+	- name: DOMAIN_NAME
+		tags:
+			- aws
+	- name: AWS_CLOUDFORMATION_STACK_NAME
+		tags:
+			- aws
+	- name: AWS_CLOUDFORMATION_STACK_NAME
+		tags:
+			- aws
+	- name: CERTIFICATE_ARN
+		tags:
+			- aws
+	- name: OAI_ID
+		tags:
+			- aws
