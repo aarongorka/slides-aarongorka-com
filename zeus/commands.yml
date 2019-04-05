@@ -44,7 +44,7 @@ commands:
 
   dotenv:
     exec: |
-      echo "" >> .env
+      touch .env
       docker-compose run --rm envvars validate
       docker-compose run --rm envvars envfile --overwrite
     outputs:
