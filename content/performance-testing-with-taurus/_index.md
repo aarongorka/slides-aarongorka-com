@@ -58,7 +58,7 @@ scenarios:
   simple:
     think-time: 0.75
     requests:
-      - https://test.internal.perf.au.edge.zip.co/healthz
+      - https://test.example.com/healthz
 
 reporting:
   - module: passfail
