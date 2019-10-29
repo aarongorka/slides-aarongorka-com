@@ -7,6 +7,68 @@ reveal_hugo:
   margin: 0.2
 ---
 
+<style>
+.reveal section img {
+    border: none;
+    box-shadow: none;
+}
+
+.reveal {
+    font-family: Montserrat;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: Montserrat;
+    text-transform: none;
+    letter-spacing: 0;
+    font-style: italic;
+}
+
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: Montserrat;
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: 0;
+    font-style: italic;
+}
+
+.reveal section.orange {
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+.reveal section.orange h1,
+.reveal section.orange h2,
+.reveal section.orange h3,
+.reveal section.orange h4,
+.reveal section.orange h5,
+.reveal section.orange h6 {
+    color: #ffffff;
+}
+
+.reveal section.orange h2,
+.reveal section.orange h3,
+.reveal section.orange h4,
+.reveal section.orange h5,
+.reveal section.orange h6 {
+    font-weight: 300;
+}
+
+.reveal a {
+  color: #f47d20;
+}
+
+</style>
+
 # Introduction to
 
 ![](/cookiecutter_medium.png)
@@ -23,7 +85,16 @@ reveal_hugo:
 
 ---
 
-## The Problem
+{{< slide background="#f47d20" class="orange" >}}
+
+# Agenda
+
+#### Problem
+#### Solution
+#### Why Cookiecutter
+#### Usage
+#### Example Cookiecutter
+#### Advanced Usage
 
 ---
 
