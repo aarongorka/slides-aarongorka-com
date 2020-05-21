@@ -1,7 +1,7 @@
 version: '3'
 services:
   hugo:
-    image: registry.gitlab.com/pages/hugo:latest
+    image: registry.gitlab.com/pages/hugo:0.59.1
     env_file: .env
     entrypoint: ["hugo"]
     command: "server --buildDrafts --bind 0.0.0.0"
