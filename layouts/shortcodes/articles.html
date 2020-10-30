@@ -1,5 +1,5 @@
 <ul>
-{{ range $ind,$art := $.Site.Pages.ByDate }}
+{{ range $ind,$art := $.Site.Pages.ByDate.Reverse }}
     {{ if not $art.IsHome }}
         {{ if (and (ne $art.Type "categories") (ne $art.Type "tags")) }}
             <li><a href="{{ $art.Permalink }}">{{ $art.Params.title }}</a></li>
